@@ -1,0 +1,381 @@
+/*Base*/
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Pacifico','Comic Sans MS', cursive, sans-serif;
+  transition: all 0.1s;
+}
+
+body{
+  overflow: hidden;
+  background-color: var(--dominant-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root{
+  --dominant-color: rgb(0, 100, 100);
+  --primary-color: rgb(251, 106, 53);
+  --secondary-color: rgb(255,255,0);
+}
+
+.header{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--primary-color);
+}
+
+.title{
+  position: absolute;
+  display: inline-block;
+  color: var(--secondary-color);
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.main{
+  width: 80vw;
+  height: 100vh;
+  background-color: var(--dominant-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.siteStart{
+  display: flex;
+  width: 300px;
+  height: 300px;
+  background-color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  border: 1px var(--secondary-color) solid;
+  border-radius: 150px;
+}
+
+.siteStart p{
+  font-size: x-large;
+}
+
+/*Players number*/
+
+.players-number,
+.players-names,
+.round-selection,
+.category-selection,
+.announcements,
+.asking,
+.guessing,
+.choice{
+  height: fit-content;
+  width: fit-content;
+  padding: 10px 16px;
+  background-color: var(--dominant-color);
+  border-style: solid;
+  border-radius: 8px;
+  border-color: var(--primary-color);
+  border-width: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.players-number p{
+  display: block;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.players-number div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.players-number-input{
+  display: inline-block;
+  width: 150px;
+  height: 25px;
+}
+
+.check-button{
+  display: inline-block;
+  background-color: rgb(0, 210, 0);
+  border:none;
+  width: 30px;
+  height: 26px;
+  font-weight: bolder;
+}
+
+.auto-save-off{
+  border: 1px var(--secondary-color) solid;
+  color: black;
+  margin: 9px 0 0 0 ;
+  padding: 2px;
+  background-color: var(--primary-color);
+}
+
+.auto-save-on{
+  border: 1px var(--primary-color) solid;
+  color: black;
+  margin: 9px 0 0 0 ;
+  padding: 2px;
+  background-color: var(--secondary-color);
+}
+
+/*PLayers Names*/
+
+.players-names input{
+  width: 240px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.check-button-2{
+  background-color: rgb(0, 210, 0);
+  border:none;
+  width: 242px;
+  height: 26px;
+  font-weight: bolder;
+}
+
+/*Round Selection*/
+
+.rounds-number{
+  background-color: var(--secondary-color);
+  width: 100%;
+  padding: 2px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rounds-number input{
+  width: 45px;
+  height: 12px;
+  background-color: var(--secondary-color);
+  border:none;
+  padding: 1px;
+  justify-content: center;
+  color:black;
+}
+
+.mood{
+  background-color: var(--secondary-color);
+  padding: 2px 100px;
+  margin-bottom: 10px;
+}
+
+.round{
+  display: flex;
+  background-color: rgb(110, 110, 110);
+  width: 100%;
+  margin-bottom: 4px;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.active{
+  background-color: var(--primary-color);
+}
+
+.round:hover{
+  color: white;
+  background-color: black;
+}
+
+.active:hover{
+  color: var(--dominant-color);
+  background-color: var(--secondary-color);
+}
+
+/*Category Selection*/
+
+.cata{
+  background-color: var(--secondary-color);
+  padding: 2px 100px;
+  margin-bottom: 10px;
+}
+
+.category-selection div{
+  display: flex;
+  background-color: var(--primary-color);
+  width: 100%;
+  margin-bottom: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-selection div:hover{
+  color: var(--dominant-color);
+  background-color: var(--secondary-color);
+}
+
+/*Announcements*/
+
+.announcements p{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.announcements button{
+  width: 140px;
+  padding: 2px 0px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.highlight{
+  color: var(--primary-color);
+}
+
+/* Asking */
+
+.asking button{
+  margin-top: 10px;
+  width: 140px;
+  padding: 2px 0px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+/* Guessing */
+
+.guessings,
+.choices{
+  display: flex;
+  flex-direction: column;
+}
+
+.guessing p,
+.choice p{
+  margin-bottom: 10px;
+}
+
+.guessings button,
+.choice button{
+  width: 155px;
+  margin-bottom: 6px;
+  padding: 2px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 1px solid black;
+}
+
+.guessings button:hover,
+.choice button:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.wrongChoice{
+  background-color: red !important;
+  color: black !important;
+}
+
+.correctChoice{
+  background-color: green !important;
+  color: black !important;
+}
+
+/* ScoreSheet */
+
+.scoreSheet {
+  display: grid;
+  height: fit-content;
+  grid-template-columns: 1fr 80px 100px 120px;
+  width: 500px;
+  background-color: var(--dominant-color);
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #333;
+  border-width: 3px;
+}
+
+.score-header {
+  background-color: var(--primary-color);
+  color: #1e1e1e;
+  text-align: center;
+  padding: 10px;
+  font-size: 18;
+  border-style: solid;
+  border-color: #333;
+  border-width: 1px;
+}
+
+.cell{
+  background-color: #1e1e1e;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #333;
+  color: var(--primary-color);
+}
+
+.penalty,
+.nope{
+  width: 44px;
+  padding: 2px;
+  background-color: red;
+  color: black;
+  border: 2px solid black;
+}
+
+.bounce,
+.yup{
+  width: 44px;
+  padding: 2px;
+  background-color: green;
+  color: black;
+  border: 2px solid black;
+}
+
+.next-round{
+  font-size: 15px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  padding: 3px;
+  width: 120px;
+  border: #333 1px solid;
+  margin-top: 12px;
+}
+
+.winner{
+  font-size: 30px;
+}
+
+.yup,
+.nope{
+  margin-top: 10px !important;
+  width: 55px !important;
+}
+
+.white-player{
+  background-color: white !important; 
+  color: black !important;
+}
+
+.black-player{
+  background-color: black !important;
+  color: white !important;
+}
+
+.check{
+  width: 95%;
+  background-color: var(--primary-color);
+  border: black 1px solid;
+}
